@@ -23,9 +23,9 @@ let questions = [
     },{
         question : "När grundades Facebook?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "7 miljoner bilder",
-        choiceB : "ca 14 miljoner bilder",
-        choiceC : "32 miljoner bilder",
+        choiceA : "Februari 2006",
+        choiceB : "Februari 2004",
+        choiceC : "Februari 2002",
         correct : "B"
     },{
         question : "Hur många bilder tror du laddas upp varje dag?",
@@ -51,6 +51,20 @@ let questions = [
     },{
         question : "Är det möjligt att radera ett meddelande du redan skickat?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
+        choiceA : "Nej, det går inte",
+        choiceB : "Ja, meddelandet raderas helt",
+        choiceC : "Ja, men enbart för dig själv",
+        correct : "B"
+    },{
+        question : "Vad stämmer inte in på FB?",
+        imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
+        choiceA : "7 miljoner bilder",
+        choiceB : "ca 14 miljoner bilder",
+        choiceC : "32 miljoner bilder",
+        correct : "B"
+    },{
+        question : "Vad stämmer inte in på FB?",
+        imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
         choiceA : "7 miljoner bilder",
         choiceB : "ca 14 miljoner bilder",
         choiceC : "32 miljoner bilder",
@@ -64,11 +78,11 @@ let questions = [
         correct : "B"
     },
     {
-        question : "Vilka av dessa appar är kopplade till FB?",
+        question : "Vilka av dessa appar ägs av Facebook?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
         choiceA : "Snapchat",
         choiceB : "Twitter",
-        choiceC : "Instagram",
+        choiceC : "WhatsApp",
         correct : "C"
     }
 ];
