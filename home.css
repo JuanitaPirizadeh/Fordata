@@ -50,7 +50,7 @@ grid-template-columns: repeat(3, 1fr);
     box-shadow: var(--shadow);
 }
 .main-nav a:hover{
-    background: var(--dark);
+    background: #666;
     color:var(--light);
 }
 
@@ -136,7 +136,7 @@ grid-template-columns: repeat(3, 1fr);
     
     }
        
-.btn:hover {background-color: white}
+.btn:hover {background-color:#666;}
        
 .btn:active {
 background-color: white;

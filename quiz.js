@@ -192,13 +192,13 @@ function scoreRender(){
     const scorePerCent = Math.round(100 * score/questions.length);
     
     // Bild beroende på vilken poäng man fått
-    let img = (scorePerCent >= 80) ? "img/5.png" :
+    /*let img = (scorePerCent >= 80) ? "img/5.png" :
               (scorePerCent >= 60) ? "img/4.png" :
               (scorePerCent >= 40) ? "img/3.png" :
               (scorePerCent >= 20) ? "img/2.png" :
               "img/1.png";
     
-    scoreDiv.innerHTML = "<img src="+ img +">";
+    scoreDiv.innerHTML = "<img src="+ img +">"; */
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
 
