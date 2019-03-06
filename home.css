@@ -113,81 +113,13 @@ grid-template-columns: repeat(3, 1fr);
      box-shadow: var(--shadow);
      display: grid;
      grid-gap: 30px;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(1, 1fr);
      padding: 3rem;
+   text-align: center;
  }
 
- .weeklytheme{
-     margin-bottom: 85px;
- }
-/*portfolio*/
- .portfolio {
-     display: grid;
-     grid-gap: 20px;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
- }
-.portfolio img{
-    width: 100%;
-    box-shadow: var(--shadow);
-}
+ 
 
-.kattknapp
-{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  position: relative;
-  background-color: #f1f1f1;
-  color: #666;
-  top: 10px;
-  height: 30px;
-  width: 30px;
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-    outline: none;
-    margin-left: 90px;
-    margin-bottom: 1px;
-}
-.fontknapp
-{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  position: relative;
-  background-color: #f1f1f1;
-  color: #666;
-  top: 10px;
-  height: 30px;
-  width: 30px;
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-margin-left: 90px;
-  outline: none;
-}
-
-.kattknapp:checked::before
-{
-  position: absolute;
-  font: 30px/1 'Open Sans', sans-serif;
-  left: 11px;
-  top: 0px;
-  content: '\02143';
-  transform: rotate(40deg);
-}
-
-.fontknapp:checked::before
-{
-  position: absolute;
-  font: 30px/1 'Open Sans', sans-serif;
-  left: 11px;
-  top: 0px;
-  content: '\02143';
-  transform: rotate(40deg);
-}
 .btn{
     margin-left: 0px;
     padding: 10px 20px;
@@ -196,7 +128,7 @@ margin-left: 90px;
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color:var(--dark);
+    background-color: #bcbabe;
     border: 20px;
     border-radius: 15px;
     box-shadow: 0 9px #999;

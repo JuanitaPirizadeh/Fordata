@@ -1,4 +1,4 @@
-// select all elements
+// Välj element! 
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
@@ -37,44 +37,44 @@ let questions = [
     },{
         question : "Vilka av dessa företag har FB sammarbetat med?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "7 miljoner bilder",
-        choiceB : "ca 14 miljoner bilder",
-        choiceC : "32 miljoner bilder",
-        correct : "B"
+        choiceA : "Spotify",
+        choiceB : "Coca Cola",
+        choiceC : "Nike",
+        correct : "A"
     },{
         question : "Vilka av dessa spel kan du spela på FB?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "7 miljoner bilder",
-        choiceB : "ca 14 miljoner bilder",
-        choiceC : "32 miljoner bilder",
-        correct : "B"
+        choiceA : "Nail art Design",
+        choiceB : "Candy Crush",
+        choiceC : "Sonic the hedgehog",
+        correct : "A"
     },{
         question : "Är det möjligt att radera ett meddelande du redan skickat?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
         choiceA : "Nej, det går inte",
         choiceB : "Ja, meddelandet raderas helt",
-        choiceC : "Ja, men enbart för dig själv",
+        choiceC : "Meddelandet raderas enbart för dig själv",
         correct : "B"
     },{
-        question : "Vad stämmer inte in på FB?",
+        question : "Vad skulle det ursprungligen stå på 'Like-knappen'?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "7 miljoner bilder",
-        choiceB : "ca 14 miljoner bilder",
-        choiceC : "32 miljoner bilder",
-        correct : "B"
+        choiceA : "Greate!",
+        choiceB : "Wow!",
+        choiceC : "Awesome!",
+        correct : "C"
     },{
-        question : "Vad stämmer inte in på FB?",
+        question : "Vad är det man delar med sig mest av på FB?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "7 miljoner bilder",
-        choiceB : "ca 14 miljoner bilder",
-        choiceC : "32 miljoner bilder",
-        correct : "B"
+        choiceA : "Videor",
+        choiceB : "Bilder",
+        choiceC : "Gifar",
+        correct : "A"
     },{
-        question : "Vad stämmer inte in på FB?",
+        question : "Vem föreställde den första bilden som laddades upp FB?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "7 miljoner bilder",
-        choiceB : "ca 14 miljoner bilder",
-        choiceC : "32 miljoner bilder",
+        choiceA : "Charlie Chaplin",
+        choiceB : "Al Pachino",
+        choiceC : "Grace Kelly",
         correct : "B"
     },
     {
@@ -150,17 +150,17 @@ function renderCounter(){
     }
 }
 
-// checkAnwer
+// checkAnwer = undersök svaren
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
-        // answer is correct
+        // Svaret är korrekt
         score++;
-        // change progress color to green
+        // Byt färg till grönt
         answerIsCorrect();
     }else{
-        // answer is wrong
-        // change progress color to red
+        // Svaret är fel
+        // Byt färg till rött
         answerIsWrong();
     }
     count = 0;
@@ -168,18 +168,18 @@ function checkAnswer(answer){
         runningQuestion++;
         renderQuestion();
     }else{
-        // end the quiz and show the score
+        // Avsluta quiz och visa poäng
         clearInterval(TIMER);
         scoreRender();
     }
 }
 
-// answer is correct
+// Rätt svar
 function answerIsCorrect(){
     document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
 }
 
-// answer is Wrong
+// Fel svar
 function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
@@ -191,7 +191,7 @@ function scoreRender(){
     // Räkna ut antal rätt på frågorna i procent 
     const scorePerCent = Math.round(100 * score/questions.length);
     
-    // choose the image based on the scorePerCent
+    // Bild beroende på vilken poäng man fått
     let img = (scorePerCent >= 80) ? "img/5.png" :
               (scorePerCent >= 60) ? "img/4.png" :
               (scorePerCent >= 40) ? "img/3.png" :
