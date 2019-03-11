@@ -58,7 +58,7 @@ let questions = [
     },{
         question : "Vad skulle det ursprungligen stå på 'Like-knappen'?",
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
-        choiceA : "Greate!",
+        choiceA : "Great!",
         choiceB : "Wow!",
         choiceC : "Awesome!",
         correct : "C"
@@ -67,7 +67,7 @@ let questions = [
         imgSrc : "/Users/juanitapirizadeh/Desktop/projekt2/images/fb-logo.png",
         choiceA : "Videor",
         choiceB : "Bilder",
-        choiceC : "Gifar",
+        choiceC : "Gifs",
         correct : "A"
     },{
         question : "Vem föreställde den första bilden som laddades upp FB?",
@@ -98,7 +98,7 @@ const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
 let score = 0;
 
-// "render" en fråga
+// Skapa/Göra en fråga
 function renderQuestion(){
     let q = questions[runningQuestion];
     
@@ -121,14 +121,14 @@ function startQuiz(){
     TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
 }
 
-// "render" progress 
+// Skapa/göra progress 
 function renderProgress(){
     for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
     }
 }
 
-// counter render
+// Göra räknare/counter
 
 function renderCounter(){
     if(count <= questionTime){
@@ -137,7 +137,9 @@ function renderCounter(){
         count++
     }else{
         count = 0;
-        // change progress color to red
+
+// Byta färg till röd beroende på poäng
+
         answerIsWrong();
         if(runningQuestion < lastQuestion){
             runningQuestion++;
@@ -150,7 +152,7 @@ function renderCounter(){
     }
 }
 
-// checkAnwer = undersök svaren
+// Undersök svaren = checkAnswer
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
@@ -184,21 +186,16 @@ function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
 
-// score render
+// Göra poängen
 function scoreRender(){
     scoreDiv.style.display = "block";
     
-    // Räkna ut antal rätt på frågorna i procent 
+// Räkna ut antal rätt på frågorna i procent 
     const scorePerCent = Math.round(100 * score/questions.length);
     
-    // Bild beroende på vilken poäng man fått
-    /*let img = (scorePerCent >= 80) ? "img/5.png" :
-              (scorePerCent >= 60) ? "img/4.png" :
-              (scorePerCent >= 40) ? "img/3.png" :
-              (scorePerCent >= 20) ? "img/2.png" :
-              "img/1.png";
-    
-    scoreDiv.innerHTML = "<img src="+ img +">"; */
+
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    alert ("Tack för din medverkan, ditt svar kommer skickas till Facebooks huvudkontor!");
 }
+
 
